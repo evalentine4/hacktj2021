@@ -12,11 +12,11 @@ console.log("test");
     );
     //await page.waitForSelector('#top > div.container > div.header > div > div.logocontainer > a > span');
     await page.screenshot({
-        path: "./screenshot.png"
+        path: "./ignore.png"
     });
     const elementHandler = await page.$('#demoCaptcha_CaptchaImage');
     await elementHandler.screenshot({
-        path: "./element.png"
+        path: "./captcha.jpg"
     });
     //const base64String = await elementHandler.screenshot({ encoding: "base64" });
     //console.log(base64String);
