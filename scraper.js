@@ -10,8 +10,14 @@ console.log("test");
         "https://captcha.com/demos/features/captcha-demo.aspx",
         { waitUntil: "load" }
     );
-    await page.waitForSelector("#demoCaptcha_CaptchaImage");
-    const elementHandler = await page.$("#demoCaptcha_CaptchaImage");
-    const base64String = await elementHandler.screenshot({ encoding: "base64" });
-    console.log(base64String);
+    //await page.waitForSelector('#top > div.container > div.header > div > div.logocontainer > a > span');
+    await page.screenshot({
+        path: "./screenshot.png"
+    });
+    const elementHandler = await page.$('#demoCaptcha_CaptchaImage');
+    await elementHandler.screenshot({
+        path: "./element.png"
+    });
+    //const base64String = await elementHandler.screenshot({ encoding: "base64" });
+    //console.log(base64String);
 })();
