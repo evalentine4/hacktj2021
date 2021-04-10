@@ -11,7 +11,7 @@ import numpy as np
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'png'])
 IMAGE_SIZE = (224, 224)
 UPLOAD_FOLDER = 'uploads'
-vgg16 = load_model('model/vgg16.h5')
+model = load_model('model/CAPTCHATEXT_MDOEL.h5')
 
 
 def allowed_file(filename):
@@ -23,7 +23,7 @@ def predict(file):
     img  = load_img(file, target_size=IMAGE_SIZE)
     img = img_to_array(img)/255.0
     img = np.expand_dims(img, axis=0)
-    probs = vgg16.predict(img)[0]
+    probs = model.predict(img)[0]
     output = {'Cat:': probs[0], 'Dog': probs[1]}
     return output
 
