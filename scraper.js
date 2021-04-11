@@ -18,6 +18,7 @@ console.log("test");
     await elementHandler.screenshot({
         path: "./captcha.jpg"
     });
+    await browser.close();
     //const base64String = await elementHandler.screenshot({ encoding: "base64" });
     //console.log(base64String);
 })();
