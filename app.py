@@ -1,4 +1,5 @@
-import flask
+
+
 import os
 from flask import Flask, request, redirect, url_for, send_from_directory, render_template
 from keras.preprocessing.image import ImageDataGenerator, load_img, img_to_array
@@ -11,7 +12,7 @@ import numpy as np
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'png'])
 IMAGE_SIZE = (224, 224)
 UPLOAD_FOLDER = 'uploads'
-model = load_model('C:\Users\Edward Z\Downloads\HackTJ\HackTJ\CAPTCHATEXT_MDOEL.h5')
+model = load_model('C:/User/Edward Z/Downloads/HackTJ/HackTJ/CAPTCHATEXT_MDOEL.h5')
 
 
 def allowed_file(filename):
