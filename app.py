@@ -11,7 +11,7 @@ import numpy as np
 ALLOWED_EXTENSIONS = set(['jpg', 'jpeg', 'png'])
 IMAGE_SIZE = (224, 224)
 UPLOAD_FOLDER = 'uploads'
-model = load_model('hacktj2021/model/CAPTCHATEXT_MDOEL.pb')
+model = load_model('C:\Users\Edward Z\Downloads\HackTJ\HackTJ\CAPTCHATEXT_MDOEL.h5')
 
 
 def allowed_file(filename):
